@@ -1,0 +1,107 @@
+name: "hbk_mnist"
+
+# train/test memory data数据层
+layer {
+  name: "mnist"
+  type: "MemoryData"
+  top: "data"
+  top: "label"
+  include {
+    phase: TRAIN
+  }
+  memory_data_param {
+    batch_size: 50
+    channels: 2
+    height: 1
+    width: 1
+  }
+}
+layer {
+  name: "mnist"
+  type: "MemoryData"
+  top: "data"
+  top: "label"
+  include {
+    phase: TEST
+  }
+  memory_data_param {
+    batch_size: 50
+    channels: 2
+    height: 1
+    width: 1
+  }
+}
+
+# 全连接层，激活层为ReLU   784->50->10
+layer {
+  name: "ip1"
+  type: "InnerProduct"
+  bottom: "data"
+  top: "ip1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 50
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "relu1"
+  type: "ReLU"
+  bottom: "ip1"
+  top: "re1"
+}
+
+
+layer {
+  name: "ip2"
+  type: "InnerProduct"
+  bottom: "re1"
+  top: "ip2"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+# 测试验证用，不必须，输出准确率
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "ip2"
+  bottom: "label"
+  top: "accuracy"
+  include {
+    phase: TEST
+  }
+}
+
+# 代价Cost层
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "ip2"
+  bottom: "label"
+  top: "loss"
+}

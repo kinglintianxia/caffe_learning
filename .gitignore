@@ -61,3 +61,15 @@ Vocabulary
 # shell
 *.sh~
 
+# python
+*.pyc
+
+# ch02/notMNIST_small
+ch02/05/notMNIST_small
+ch02/08/notMNIST_small
+
+# hdf5
+*.h5
+
+# png
+*.png

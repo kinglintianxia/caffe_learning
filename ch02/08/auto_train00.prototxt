@@ -1,0 +1,68 @@
+layer {
+  name: "data"
+  type: "ImageData"
+  top: "data"
+  top: "label"
+  transform_param {
+    mean_value: 108.0
+  }
+  image_data_param {
+    source: "train00.imglist"
+    batch_size: 200
+    new_height: 28
+    new_width: 28
+  }
+}
+layer {
+  name: "ip1"
+  type: "InnerProduct"
+  bottom: "data"
+  top: "ip1"
+  inner_product_param {
+    num_output: 50
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "relu1"
+  type: "ReLU"
+  bottom: "ip1"
+  top: "ip1"
+}
+layer {
+  name: "ip2"
+  type: "InnerProduct"
+  bottom: "ip1"
+  top: "ip2"
+  inner_product_param {
+    num_output: 4
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "relu2"
+  type: "ReLU"
+  bottom: "ip2"
+  top: "ip2"
+}
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "ip2"
+  bottom: "label"
+  top: "loss"
+}
+layer {
+  name: "accu"
+  type: "Accuracy"
+  bottom: "ip2"
+  bottom: "label"
+  top: "accu"
+  include {
+    phase: TEST
+  }
+}
