@@ -7,6 +7,7 @@
 export PATH=/usr/local/cuda-9.1/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}} 
 ```
+
 ##2 install cudnn
 * [download link](https://developer.nvidia.com/rdp/cudnn-download)
 * version: cuDNN v7.1.2 Library for Linux
@@ -20,7 +21,9 @@ $ sudo ln -s libcudnn.so.7 libcudnn.so  #生成软链接
 $ sudo vim /etc/ld.so.conf.d/cuda.conf
 >/usr/local/cuda/lib64
 ```
+
 ##3 opencv 3.4.0
+
 ##4 caffe
 * [BVLC/caffe](https://github.com/BVLC/caffe)
 * Dependencies
@@ -62,6 +65,7 @@ make test
 make runtest
 make pycaffe
 ```
+
 ##5 Test caffe
 ```shell
 ./build/tools/caffe; shows help imformation

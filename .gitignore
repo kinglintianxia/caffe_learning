@@ -73,3 +73,16 @@ ch02/08/notMNIST_small
 
 # png
 *.png
+
+# voc2012
+ch02/13/Voc/
+
+# 14
+ch02/14/lmdb_test
+ch02/14/lmdb_train
+
+# 15
+ch02/15/lmdb_test_data
+ch02/15/lmdb_test_label
+ch02/15/lmdb_train_data
+ch02/15/lmdb_train_label

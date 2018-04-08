@@ -5,7 +5,6 @@
 #<<用Python做深度学习2-caffe>>
 #http://study.163.com/course/courseMain.htm?courseId=1003491001
 
-
 import caffe, h5py
 
 from pylab import *
@@ -42,17 +41,19 @@ for it in range(niter):
     solver.step(1)  # SGD by Caffe
     train_loss[it] = solver.net.blobs['loss'].data
     solver.test_nets[0].forward(start='data')
-
+    # calu test accu
     if it % test_interval == 0:
         print 'Iteration', it, 'testing...'
         correct = 0
         data = solver.test_nets[0].blobs['ip2'].data
         label = solver.test_nets[0].blobs['label'].data
+        # 平均100次
         for test_it in range(100):
             solver.test_nets[0].forward()
             # Positive -> label 1, negative -> label 0
-            for i in range(len(data)):
-                for j in range(len(data[i])):
+            for i in range(len(data)):  # bath_size
+                for j in range(len(data[i])):   # label_size
+                    # softmax classify
                     if data[i][j] > 0 and label[i][j] == 1:
                         correct += 1
                     elif data[i][j] <= 0 and label[i][j] == 0:
