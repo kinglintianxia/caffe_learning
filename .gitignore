@@ -86,3 +86,6 @@ ch02/15/lmdb_test_data
 ch02/15/lmdb_test_label
 ch02/15/lmdb_train_data
 ch02/15/lmdb_train_label
+
+# .prototxt
+*.prototxt

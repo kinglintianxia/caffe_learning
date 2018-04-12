@@ -1,0 +1,21 @@
+  0) pretrained_f: loss=1.609, acc=28%; untrained: loss=1.609, acc=28%; pretrained_l: loss=1.609, acc=28%
+ 10) pretrained_f: loss=1.282, acc=54%; untrained: loss=1.610, acc=18%; pretrained_l: loss=1.323, acc=54%
+ 20) pretrained_f: loss=1.301, acc=46%; untrained: loss=1.611, acc=12%; pretrained_l: loss=1.448, acc=42%
+ 30) pretrained_f: loss=0.999, acc=64%; untrained: loss=1.610, acc=16%; pretrained_l: loss=0.960, acc=68%
+ 40) pretrained_f: loss=0.952, acc=64%; untrained: loss=1.607, acc=24%; pretrained_l: loss=0.886, acc=68%
+ 50) pretrained_f: loss=1.074, acc=60%; untrained: loss=1.608, acc=30%; pretrained_l: loss=0.989, acc=64%
+ 60) pretrained_f: loss=0.705, acc=78%; untrained: loss=1.611, acc=20%; pretrained_l: loss=0.683, acc=70%
+ 70) pretrained_f: loss=0.746, acc=74%; untrained: loss=1.606, acc=30%; pretrained_l: loss=0.783, acc=74%
+ 80) pretrained_f: loss=0.915, acc=70%; untrained: loss=1.604, acc=30%; pretrained_l: loss=0.683, acc=74%
+ 90) pretrained_f: loss=0.734, acc=72%; untrained: loss=1.608, acc=22%; pretrained_l: loss=0.684, acc=70%
+100) pretrained_f: loss=0.816, acc=68%; untrained: loss=1.610, acc=20%; pretrained_l: loss=0.585, acc=78%
+110) pretrained_f: loss=1.037, acc=58%; untrained: loss=1.604, acc=28%; pretrained_l: loss=0.704, acc=68%
+120) pretrained_f: loss=1.128, acc=60%; untrained: loss=1.606, acc=22%; pretrained_l: loss=0.812, acc=66%
+130) pretrained_f: loss=1.047, acc=60%; untrained: loss=1.603, acc=26%; pretrained_l: loss=0.696, acc=72%
+140) pretrained_f: loss=0.801, acc=70%; untrained: loss=1.612, acc=16%; pretrained_l: loss=0.427, acc=82%
+150) pretrained_f: loss=0.793, acc=66%; untrained: loss=1.607, acc=28%; pretrained_l: loss=0.540, acc=78%
+160) pretrained_f: loss=0.977, acc=66%; untrained: loss=1.604, acc=20%; pretrained_l: loss=0.671, acc=76%
+170) pretrained_f: loss=1.200, acc=58%; untrained: loss=1.611, acc=18%; pretrained_l: loss=0.928, acc=64%
+180) pretrained_f: loss=0.782, acc=74%; untrained: loss=1.599, acc=26%; pretrained_l: loss=0.350, acc=86%
+190) pretrained_f: loss=0.780, acc=70%; untrained: loss=1.601, acc=30%; pretrained_l: loss=0.598, acc=74%
+199) pretrained_f: loss=0.952, acc=64%; untrained: loss=1.608, acc=18%; pretrained_l: loss=0.435, acc=86%

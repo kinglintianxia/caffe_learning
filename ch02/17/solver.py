@@ -11,7 +11,7 @@ from pylab import *
 from caffe import layers as L
 from caffe import params as P
 
-data_path = "/home/hbk/caffe/examples/cifar10/"
+data_path = "/home/king/Documents/caffe/examples/cifar10/"
 train_net_file = 'auto_train00.prototxt'
 test_net_file = 'auto_test00.prototxt'
 solver_file = "auto_solver.prototxt"
