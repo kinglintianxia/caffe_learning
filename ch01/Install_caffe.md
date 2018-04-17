@@ -71,3 +71,8 @@ make pycaffe
 ./build/tools/caffe; shows help imformation
 import caffe no error ocurs
 ``` 
+
+# jupyter install guide
+1. sudo pip install jupyter
+2. "export PATH=$PATH:~/.local/bin" to ~/.bashrc
+3. jupyter notebook 
