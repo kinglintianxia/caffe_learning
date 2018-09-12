@@ -54,3 +54,12 @@ sudo apt-get install ros-kinetic-global-planner
 
 # tx2_33
 ssh nvidia@10.42.0.74
+
+# 2018.09.01
+## 33_tx2_vncviewer
+wlan: 192.168.1.102
+eth0: 10.42.0.1
+
+# install x11vnc
+https://blog.csdn.net/longhr/article/details/51657610
+https://blog.csdn.net/styshoo/article/details/52706138
