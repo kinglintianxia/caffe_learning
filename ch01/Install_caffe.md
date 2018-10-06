@@ -67,6 +67,8 @@ make pycaffe
 ```
 
 ##5 Test caffe
+export PYTHONPATH="~/caffe/python" to `~/.bashrc`
+source ~/.bashrc
 ```shell
 ./build/tools/caffe; shows help imformation
 import caffe no error ocurs
